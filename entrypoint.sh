@@ -5,18 +5,6 @@ if [ -z "${FIREBASE_TOKEN}" ]; then
     exit 1
 fi
 
-if [ -z "${FIREBASE_PROJECT}" ]; then
-    echo "FIREBASE_PROJECT is missing"
-    exit 1
-fi
-
-if [ "${GITHUB_REF}" != "refs/heads/master" ]; then
-    echo "Branch: ${GITHUB_REF}"
-    echo "Aborting non-master branch deployment"
-    exit 1
-fi
-
 firebase deploy \
-    -m "${GITHUB_SHA}" \
-    --project ${FIREBASE_PROJECT} \
+    --token ${FIREBASE_TOKEN} \
     --only functions
