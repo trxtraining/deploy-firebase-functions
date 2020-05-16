@@ -1,4 +1,4 @@
-# Deploy to Firebase
+# Deploy to Firebase Functions
 
 A GitHub Action to deploy to Firebase Functions
 
