@@ -13,7 +13,7 @@ A GitHub Action to deploy to Firebase Functions that is able to deploy to differ
 
 Then, specify a value (as inidicated below in the example workflow) or none for default.
 
-###Example workflow
+### Example workflow
 
 ```
 name: Firebase
