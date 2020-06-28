@@ -1,11 +1,19 @@
-# Deploy to Firebase Functions
+# Deploy to Firebase Functions With Project Targets!
 
-A GitHub Action to deploy to Firebase Functions
+A GitHub Action to deploy to Firebase Functions that is able to deploy to different projects.  Need to deploy to production on one branch, then to development on another? Specify a 'target' by using the <key, value> set in your `firebaserc` file. For example:
 
-- Make sure you have the `firebase.json` file in the repository
-- Get the Firebase token by running `firebase login:ci` and [store it](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) as the `FIREBASE_TOKEN` secret
+```
+{
+  "projects": {
+    "default": "production project",
+    "development": "development project"
+  }
+}
+```
 
-Example workflow
+Then, specify a value (as inidicated below in the example workflow) or none for default.
+
+###Example workflow
 
 ```
 name: Firebase
