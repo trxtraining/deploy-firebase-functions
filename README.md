@@ -5,8 +5,8 @@ A GitHub Action to deploy to Firebase Functions that is able to deploy to differ
 ```
 {
   "projects": {
-    "default": "production project",
-    "development": "development project"
+    "default": "production project id",
+    "development": "development project id"
   }
 }
 ```
