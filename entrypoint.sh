@@ -12,7 +12,7 @@ fi
 
 firebase use \
    --token ${FIREBASE_TOKEN} \
-   ${TARGET}
+   TARGET
 
 firebase deploy \
     --only functions
