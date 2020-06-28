@@ -24,5 +24,5 @@ jobs:
       uses: chrissank/deploy-firebase-functions@1.0.0
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-        TARGET: ${default}
+        TARGET: default
 ```
