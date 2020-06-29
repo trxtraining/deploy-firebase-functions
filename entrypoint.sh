@@ -10,4 +10,6 @@ if [ -z "${TARGET}" ]; then
     TARGET = "default"
 fi
 
+echo "1. ${FIREBASE_TOKEN} ${TARGET}"
+
 firebase deploy --token ${FIREBASE_TOKEN} -P ${TARGET} --only functions 
