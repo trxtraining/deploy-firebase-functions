@@ -12,4 +12,4 @@ fi
 
 firebase use ${TARGET}
 
-firebase deploy --token ${FIREBASE_TOKEN} --only functions
+firebase deploy --token ${FIREBASE_TOKEN} --only functions,database
