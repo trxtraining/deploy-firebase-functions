@@ -15,8 +15,13 @@ if [ -z "${WORKING_DIRECTORY}" ]; then
     WORKING_DIRECTORY = "."
 fi
 
+if [ -z "${DEPLOY_ONLY}" ]; then
+    echo "DEPLOY_ONLY is missing"
+    DEPLOY_ONLY = "functions"
+fi
+
 cd ${WORKING_DIRECTORY}
 
 firebase use ${TARGET}
 
-firebase deploy --token ${FIREBASE_TOKEN} --only functions,database
+firebase deploy --token ${FIREBASE_TOKEN} --only ${DEPLOY_ONLY}
