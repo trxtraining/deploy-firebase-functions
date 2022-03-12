@@ -10,6 +10,13 @@ if [ -z "${TARGET}" ]; then
     TARGET = "default"
 fi
 
+if [ -z "${WORKING_DIRECTORY}" ]; then
+    echo "WORKING_DIRECTORY is missing"
+    WORKING_DIRECTORY = "."
+fi
+
+cd ${WORKING_DIRECTORY}
+
 firebase use ${TARGET}
 
 firebase deploy --token ${FIREBASE_TOKEN} --only functions,database
