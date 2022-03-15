@@ -12,15 +12,14 @@ fi
 
 if [ -z "${WORKING_DIRECTORY}" ]; then
     echo "WORKING_DIRECTORY is missing"
-    WORKING_DIRECTORY = "."
+elif
+    cd ${WORKING_DIRECTORY}
 fi
 
 if [ -z "${DEPLOY_ONLY}" ]; then
     echo "DEPLOY_ONLY is missing"
     DEPLOY_ONLY = "functions"
 fi
-
-cd ${WORKING_DIRECTORY}
 
 firebase use ${TARGET}
 
