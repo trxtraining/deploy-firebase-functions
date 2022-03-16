@@ -12,7 +12,7 @@ fi
 
 if [ -z "${WORKING_DIRECTORY}" ]; then
     echo "WORKING_DIRECTORY is missing"
-elif
+else
     cd ${WORKING_DIRECTORY}
 fi
 
