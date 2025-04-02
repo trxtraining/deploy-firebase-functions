@@ -29,5 +29,5 @@ firebase use ${TARGET}
 
 echo "2"
 
-firebase deploy --token ${FIREBASE_TOKEN} --only ${DEPLOY_ONLY} --debug
+firebase deploy --token ${FIREBASE_TOKEN} --only ${DEPLOY_ONLY} --force
 
